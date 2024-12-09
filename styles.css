@@ -1,0 +1,139 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+    background: url('FolhaAmassada.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.background {
+    position: relative;
+    width: 90%; /* Ajuste de largura para telas menores */
+    max-width: 500px; /* Limita largura em telas maiores */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Corações à esquerda */
+.hearts-left {
+    position: absolute;
+    top: 100px;
+    left: -15px;
+    width: 60px;
+}
+
+/* Corações à direita */
+.hearts-right {
+    position: absolute;
+    top: 100px;
+    right: -15px;
+    width: 60px;
+}
+
+/* Título entre os corações */
+.title {
+    position: absolute;
+    top: 70px; /* Ajusta para alinhar ao centro */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%; /* Ajuste responsivo */
+}
+
+/* Folha de texto */
+.text-container {
+    position: relative;
+    text-align: center;
+    margin-top: 160px; /* Espaço abaixo do título e corações */
+}
+
+.text-background {
+    width: 100%;
+    max-width: 400px; /* Ajuste tamanho da folha */
+    margin: 0 auto;
+    display: block;
+}
+
+.text-content {
+    position: absolute;
+    top: 130px; /* Ajusta para alinhar o texto dentro da folha */
+    left: 30px;
+    right: 30px;
+    width: 70%; /* Diminui o tamanho do texto na folha */
+    max-width: 350px; /* Limita a largura máxima */
+    height: auto; /* Garante proporção da imagem */
+}
+
+/* Botão */
+.button {
+    display: block;
+    width: 200px;
+    margin: 20px auto 0; /* Espaçamento no final */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Adiciona transição suave */
+}
+
+.button:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8); /* Escurece o botão, criando um tom mais vinho */
+}
+
+/* Nos */
+.Nós {
+    position: absolute;
+    top: 180px;
+    left: 90px;
+    right: 25px;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+}
+
+/* Nos2 */
+.Nós2 {
+    position: absolute;
+    top: 900px;
+    left: -200px;
+    right: 25px;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    z-index: 2; /* Garante que fique acima da folha */
+    pointer-events: none; /* Evita interferência na interação com o botão ou outros elementos */
+}
+
+/* Responsividade para dispositivos móveis */
+@media screen and (max-width: 600px) {
+    .background {
+        width: 90%; /* Mais espaço para celulares */
+        max-width: none; /* Não limita a largura */
+    }
+
+    .hearts-left, .hearts-right {
+        width: 50px; /* Reduz o tamanho dos corações */
+        top: 80px; /* Ajuste a posição vertical */
+    }
+
+    .title {
+        top: 50px; /* Ajuste o título para mais próximo da parte superior */
+        width: 80%; /* Ajuste para se adaptar melhor em telas menores */
+    }
+
+    .text-background {
+        max-width: 350px; /* Ajusta o tamanho da folha */
+    }
+
+    .text-content {
+        top: 100px; /* Ajusta o posicionamento do conteúdo dentro da folha */
+        left: 20px;
+        right: 20px;
+        width: 80%; /* Ajusta a largura do texto */
+    }
+
+    .button {
+        width: 150px; /* Ajusta o botão para telas menores */
+    }
+}
